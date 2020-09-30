@@ -69,6 +69,7 @@ public class ComboBoxExperiments extends Application {
         VBox vbox = new VBox(label,comboBox,text);
         Scene scene = new Scene(vbox, 400, 200);
         primaryStage.setScene(scene);
+        primaryStage.show();
 
 
     }
