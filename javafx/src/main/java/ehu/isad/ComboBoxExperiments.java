@@ -22,6 +22,8 @@ import java.io.InputStream;
 
 public class ComboBoxExperiments extends Application {
 
+    private Txanpona txanpona=null;
+
     @Override
     public void start(Stage primaryStage) throws Exception {
 
@@ -38,7 +40,7 @@ public class ComboBoxExperiments extends Application {
         Text text = new Text();
         Label label=new Label();
         comboBox.getSelectionModel().selectFirst();
-        Txanpona txanpona=null;
+
 
 
         try {
@@ -55,14 +57,14 @@ public class ComboBoxExperiments extends Application {
 
 
         comboBox.setOnAction(e -> {
-            Txanpona txanpona1=null;
+
             System.out.println(comboBox.getValue());
             try {
-                txanpona1 = this.readFromUrl(comboBox.getValue().toString());
+                txanpona = this.readFromUrl(comboBox.getValue().toString());
             } catch (IOException ioException) {
                 ioException.printStackTrace();
             }
-            text.setText("prezioa: "+txanpona1.price);
+            text.setText("prezioa: "+txanpona.price);
 
         });
 
