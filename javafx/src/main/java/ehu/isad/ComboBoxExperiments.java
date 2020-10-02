@@ -100,6 +100,7 @@ public class ComboBoxExperiments extends Application {
 
     }
 
+    //main
     public static void main(String[] args) {
         Application.launch(args);
     }
